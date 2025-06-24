@@ -7,7 +7,7 @@ let builtInResources = {}; // Stores content of built-in resources once loaded
 
 // --- IMPORTANT: CONFIGURE THIS URL FOR DEPLOYMENT ---
 // For local development with Flask backend on port 5000:
-const BACKEND_URL = 'http://127.0.0.1:5000';
+const BACKEND_URL = 'https://fizeeeti0n.pythonanywhere.com'; // Replace with your actual PythonAnywhere URL
 // For Vercel deployment, replace the above line with your PythonAnywhere URL, e.g.:
 // const BACKEND_URL = 'https://yourusername.pythonanywhere.com';
 // ---------------------------------------------------
