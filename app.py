@@ -10,7 +10,10 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Configure CORS: Explicitly allow the frontend origin
+# Allow requests from your Render frontend URL
 CORS(app, resources={r"/*": {"origins": "https://study-ai-enxg.onrender.com"}})
+# Or, for testing (less secure):
+# CORS(app, resources={r"/*": {"origins": "*"}})
 
 # --- Configure Google Gemini API ---
 # Get your API key from the environment variable (loaded from .env by Flask's debug mode or python-dotenv)
