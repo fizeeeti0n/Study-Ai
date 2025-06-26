@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="/photo/ai.png" type="image/x-icon">
     <title>Study Assistant</title>
     <link rel="stylesheet" href="style.css">
-  <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline';
-        style-src 'self' 'unsafe-inline';
-        img-src 'self' data: https://picsum.photos; /* Added picsum.photos for sample images if used */
-        connect-src 'self' http://127.0.0.1:5000 https://app-api-eta.vercel.app/; /* Update this line */
-        font-src 'self';
-    "></head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' http://127.0.0.1:5000; font-src 'self';">
+</head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">🎓</div>
-            <h1>Study AI</h1>
+            <h1>UniStudy AI</h1>
             <div class="tagline">Your Universal Academic Companion</div>
             <div class="subtitle">Department-agnostic AI study assistant for university students</div>
         </div>
@@ -181,7 +176,25 @@
             </div>
         </div>
     </div>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAGjobh8bYKlYfKzN7Dk9rIkwZUCPAPKCk",
+    authDomain: "uap-ai.firebaseapp.com",
+    projectId: "uap-ai",
+    storageBucket: "uap-ai.firebasestorage.app",
+    messagingSenderId: "507625023108",
+    appId: "1:507625023108:web:8445d6e0fa8e4cb68c84d1",
+    measurementId: "G-JVW8DLMQMJ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
